@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plain Light";
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.main{
+    background-color: #151515;
+    position: relative;
+}
+
+.loading-screen{
+    background-color: #0B0B0B;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    padding: 20vh 9vw;
+}
+
+.line1{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1vw;
+    height: fit-content;
+    width: 100%;
+    overflow: hidden;
+}
+
+.line1 h4{
+    font-family: 'slik serif';
+    font-size: 4vw;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.line1 h4:nth-child(2){
+    margin-right: 1vw;
+}
+
+.line-part1 h4:nth-child(1){
+    text-align: right;
+    width: 5vw;
+}
+
+.line1 h1{
+    line-height: 1.1;
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    display:flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.line-part1{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.line1 span{
+    font-size: 6vw;
+    text-transform: uppercase;
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes anime1 {
+    0%{
+        font-family: 'Plain Light';
+        -webkit-text-stroke: 1px white;
+        opacity: 0;
+    }
+    48%{
+        font-family: 'Plain Light';
+        font-style: normal;
+        -webkit-text-stroke: 1px white;
+        color: white;
+        opacity: 1;
+        
+    }
+    50%{
+        font-family: 'slik serif';
+        font-style: italic;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        opacity: 0;
+    }
+    100%{
+        font-family: 'slik serif';
+        font-style: italic;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        opacity: 1;
+    }
+}
+
+.page1{
+    background-color: #151515;
+    height: 100vh;
+    width: 100%;
+}
