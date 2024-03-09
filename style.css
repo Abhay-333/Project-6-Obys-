@@ -32,6 +32,10 @@ body {
     color: white;
 }
 
+body{
+    cursor: none;
+}
+
 .main{
     background-color: #151515;
     position: relative;
@@ -45,8 +49,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.425);
     border-radius: 50%;
     z-index: 999;
-    transform: translate(-50%, -50%);
-    mix-blend-mode: difference  ;
+    mix-blend-mode: difference;
 }
 
 .loading-screen{
@@ -88,10 +91,10 @@ body {
     line-height: 1.1;
     font-size: 7vw;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 900;
     display:flex;
     align-items: center;
-    gap: 1vw;
+    gap: 2vw;
 }
 
 .line-part1{
@@ -105,7 +108,7 @@ body {
     font-size: 6vw;
     text-transform: uppercase;
     animation-name: anime1;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 
@@ -114,6 +117,7 @@ body {
 @keyframes anime1 {
     0%{
         font-family: "plain light";
+        font-weight: 900;
         -webkit-text-stroke: 1px white;
         opacity: 0;
     }
@@ -123,6 +127,8 @@ body {
         -webkit-text-stroke: 1px white;
         color: white;
         opacity: 1;
+        font-weight: 900;
+
         
     }
     50%{
@@ -131,6 +137,8 @@ body {
         -webkit-text-stroke: 1px white;
         color: transparent;
         opacity: 0;
+        font-weight: 100;
+
     }
     100%{
         font-family: "silk serif light";
@@ -138,6 +146,8 @@ body {
         -webkit-text-stroke: 1px white;
         color: transparent;
         opacity: 1;
+        font-weight: 100;
+
     }
 }
 
@@ -182,17 +192,78 @@ nav .nav-part2 h5{
     font-weight: 500;
 }
 
-.page1-main{
-}
+/* .page1-main{ */
+    /* background-color: red; */
+/* } */
 
 .page1-main h1{
-    font-weight: "plain reg";
+    font-family: "plain reg";
     margin-left: 27%;
-    font-weight: 600;
+    font-weight: 900;
     font-size: 7.5vw;
     text-transform: uppercase;
     line-height: 1;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+.page1-main .page1-h1 h1:nth-child(2)
+{
+    margin: 0;
+}
+
+
+#graphic{
+    margin: 0;
+    position: relative;
+    line-height: 1.1;
+}
+
+#graphic::after{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    height:7px;
+    width:100%;
+    background-color: white;
+}
+
+#web{
+    margin: 0;
+    position: relative;
+    line-height: 1.1;
+}
+
+#web::after{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    height:7px;
+    width:100%;
+    background-color: white;
+}
+
+#web:hover{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight:100;
+}
+
+#web:hover::after{
+    display: none;
+}
+
+#graphic:hover::after{
+    display: none;
+}
+
+
+#graphic:hover{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight:100;
+    border: none;
 }
 
 .page1-main .page1-h1:nth-child(1){
@@ -208,3 +279,65 @@ nav .nav-part2 h5{
     font-family: "silk serif light";
     font-style: italic;
 }
+
+.page1-h1{
+    overflow: hidden;
+}
+
+.page1-h1 h1{
+    font-weight: 400;
+}
+
+#third-h1{
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    overflow: hidden;
+    margin-left: 27%;
+    overflow: hidden;
+}
+
+.special-h1 h1{
+    transition: all ease-in-out 0.1s;
+    display: inline-block;
+}
+
+
+.page2{
+    height:100vh;
+    width:100%;
+}
+
+.page2-video{
+    position: relative;
+    left: 30%;
+    height:60vh;
+    width:60vw;
+}
+
+.page2-video video{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 
+
+<div class="page1-h1">
+                    <h1>We Design</h1>
+                </div>
+                
+                <div class="page1-h1">
+                    <h1>Unique</h1>
+                </div>
+
+                <div class="page1-h1" id="third-h1">
+                    <h1 id="web">Web</h1>
+                    <h1>/</h1>
+                    <h1 id="graphic">Graphic</h1>
+                </div>
+
+                <div class="page1-h1">
+                    <h1>Experience</h1>
+                </div> */

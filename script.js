@@ -1,6 +1,7 @@
 var incH4 = document.querySelector('.line-part1 h4')
 var counter = 0
 var time = gsap.timeline()
+var time1 = gsap.timeline()
 var cursor = document.querySelector(".cursor")
 
 function loading(){
@@ -48,17 +49,42 @@ function loading(){
         duration:0.1,
     })
     
+    time.from(".nav-part1 svg",{
+        opacity:0
+    })
+
+    time.from(".page1-h1 h1",{
+        y:100,
+        stagger:0.1,
+    })
+
+
+    time.from(".nav-part2 h5",{
+        // y:-100,
+        opacity:0,
+        stagger:0.2,
+    })
+    
+    time.from(".nav-h5 h5",{
+        x:100,
+        opacity:0,
+        stagger:0.1,
+    })
 }
 
 function mouseFollower(){
     document.addEventListener("mousemove",function(details){
         gsap.to(".cursor",{
-            duration:0.1,
+            duration:0.2,
             top:details.clientY,
             left:details.clientX
         })
     })
 }
+
+window.addEventListener("load", function(){
+    document.body.style.cursor = 'none';
+})
 
 Shery.makeMagnet(".nav-part2 h5");
 
