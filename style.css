@@ -153,7 +153,7 @@ body{
 
 .page1{
     background-color: #151515;
-    height: 100vh;
+    height: 96vh;
     width: 100%;
 }
 
@@ -288,6 +288,15 @@ nav .nav-part2 h5{
     font-weight: 400;
 }
 
+.special-h1{
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    overflow: hidden;
+    margin-left: 27%;
+    overflow: hidden;
+}
+
 #third-h1{
     display: flex;
     height: fit-content;
@@ -297,22 +306,22 @@ nav .nav-part2 h5{
     overflow: hidden;
 }
 
-.special-h1 h1{
+#third-h1 h1{
     transition: all ease-in-out 0.1s;
-    display: inline-block;
+
 }
 
-
 .page2{
-    height:100vh;
+    height:80vh;
     width:100%;
+    position: relative;
 }
 
 .page2-video{
     position: relative;
-    left: 30%;
-    height:60vh;
-    width:60vw;
+    left: 29%;
+    height:70vh;
+    width:70vw;
 }
 
 .page2-video video{
@@ -320,24 +329,305 @@ nav .nav-part2 h5{
     width:100%;
     object-fit: cover;
     object-position: center;
+    background-image: url("./Showreel-2022-preview-1.jpg");
 }
 
-/* 
+.page2-video img{
+    position: absolute;
+    top: -1%;
+    height:105%;
+    width:105%;
+    object-fit: cover;
+    object-position: center;
+}
 
-<div class="page1-h1">
-                    <h1>We Design</h1>
-                </div>
-                
-                <div class="page1-h1">
-                    <h1>Unique</h1>
-                </div>
+.page2-video-cursor{
+    height:10.5vw;
+    width:10.5vw;
+    background-color: #FFA63D;
+    position: absolute;
+    top: -15%;
+    left: 68%;
+    border-radius: 50%;
+    z-index: 99;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
 
-                <div class="page1-h1" id="third-h1">
-                    <h1 id="web">Web</h1>
-                    <h1>/</h1>
-                    <h1 id="graphic">Graphic</h1>
-                </div>
+.page2-video-cursor i{
+    font-size: 3vw;
+}
 
-                <div class="page1-h1">
-                    <h1>Experience</h1>
-                </div> */
+.page3
+{
+    height:100vh;
+    width:100%;
+    position: relative;
+    padding-right: 4vw;
+}
+
+.page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    margin-left: 29%;
+    position: relative;
+}
+
+.page3 h1::before{
+    content:"";
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+}
+
+.page3 h1::after{
+    content:"02";
+    position: absolute;
+    left: -13.5%;
+    font-size: 3.5vw;
+    font-family: "silk serif light";
+    font-style: italic;
+    font-weight: 100;
+}
+
+.page4{
+    min-height:100vh;
+    width:100%;
+    position: relative;
+}
+
+.page4 h1{
+    font-size: 7.3vw;
+    text-transform: uppercase   ;
+    text-align: center;
+    position: relative;
+}
+
+.page4-main > h1::before{
+    content: "03";
+    position: absolute;
+    left: 20%;
+    top: 5%;
+    font-size: 3.5vw;
+    font-family: "silk serif light";
+    font-style: italic;
+    font-weight: 100;
+}
+
+.underline1{
+    height: 1px;
+    width: 69.3%;
+    background-color: white;
+    margin-left: 27%;
+    margin-top: 1.9vw;
+}
+
+.page4-main > p{
+    font-size: 2.3vw;
+    width: 36%;
+    margin-left: 28%;
+    margin-top: 5vw;
+}
+
+.page4-img{
+    position: relative;
+    left: 28%;
+    height:80vh;
+    width:55vw;
+    margin-top: 4vw;
+    display: flex;
+}
+
+.page4-img > p{
+    margin-left: 2.5vw;
+    font-size: 1.1vw;
+    font-family: "plain light";
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+.page4-img img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page4-blue{
+    height:90vh;
+    width:45vw;
+    background-color: #3F7DF4;
+    position: relative;
+    left: 50%;
+    margin-top: -8%;
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    color: white;
+    padding: 5vw;
+}
+
+.blue-elem
+{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+
+.blue-elem h2{
+    text-align: left;
+    font-family: "plain light";
+    font-weight: 400;
+}
+
+.blue-elem > h5{
+    width: 50%;
+    text-align: left;
+    font-family: "plain light";
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+.underline2{
+    margin-top: 10%;
+    position: relative;
+    left: 28%;
+    height: 1px;
+    width: 65%;
+    background-color: white;
+}
+
+.underline2 h5{
+    font-size: 1vw;
+    font-weight: 100;
+    padding-top: 2vw;
+}
+
+.page5{
+    margin-top: 10vw;
+    height:100vh;
+    width:100%;
+    position: relative;
+}
+
+.marq{
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: -3vw;
+}
+
+.marq2{
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: -3vw;
+}
+
+.marq h1{
+    font-size: 8vw;
+    font-weight: 100;
+    text-transform: uppercase;
+    display: inline-block;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    margin-right: 20px;
+    animation-name: anime2;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.marq2 h1{
+    font-size: 8vw;
+    font-weight: 100;
+    text-transform: uppercase;
+    display: inline-block;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    margin-right: 20px;
+    animation-name: anime2;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+
+.marq h1 span{
+    font-family: "silk serif";
+}
+
+.marq2 h1 span{
+    font-family: "silk serif";
+}
+
+@keyframes anime2 {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(calc(-100% - 24px));
+    }
+}
+
+footer{
+    height:90vh;
+    width:100%;
+    position: relative;
+    padding-left: 28%;
+}
+
+footer > h1{
+    margin-top: 10vw;
+    text-transform: uppercase;
+    font-size: 7vw;
+    position: relative;
+}
+
+footer > h1::before{
+    content: "04";
+    position: absolute;
+    left: -10%;
+    top: 10%;
+    font-family: "silk serif";
+    font-weight: 100;
+    font-size: 3.5vw;
+}
+
+footer > .underline2{
+    margin-top: 2vw;
+    left: 0;
+    width: 90%;
+}
+
+footer .footer-div
+{
+    margin-top: 3vw;
+    width: 90%;
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.box h4{
+    font-family: "plain reg";
+    font-weight: 500;
+    font-size: 1.3vw;
+}
+
+.box h3:nth-child(2){
+    margin-top: 2vw;
+}
+
+.box h3{
+    font-weight: 300;
+    font-size: 2vw;
+}
+
+footer > .underline2 h5{
+    font-size: 1.3vw;
+}
