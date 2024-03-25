@@ -33,7 +33,7 @@ body {
 }
 
 body{
-    cursor: none;
+    /* cursor: none; */
 }
 
 .main{
@@ -308,7 +308,6 @@ nav .nav-part2 h5{
 
 #third-h1 h1{
     transition: all ease-in-out 0.1s;
-
 }
 
 .page2{
@@ -361,30 +360,155 @@ nav .nav-part2 h5{
 
 .page3
 {
-    height:100vh;
+    min-height:100vh;
     width:100%;
     position: relative;
-    padding-right: 4vw;
+    margin-bottom: 10vw;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 50%;
 }
 
-.page3 h1{
+.page3-main{
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: fit-content;
+}
+
+.page3-main2{
+    display:flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    height: fit-content;
+}
+
+.page3 .image-container{
+    min-height:100vh;
+    width:fit-content;
+    padding: 5vw;
+    display:flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2vw;
+}
+
+.image-container .content{
+    height:70vh;
+    width:25vw;
+}
+
+.img-div{
+    position: relative;
+    overflow: hidden; 
+    height:100%;
+    width:100%;
+}
+
+.img-div img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.content > h1{
+    margin-bottom: 2vw; 
+    font-size: 2.5vw;
+    text-transform: uppercase;
+}
+
+#img1{
+    height:60vh;
+    width:25vw;
+    position: relative;
+}
+
+.text{
+    border-bottom: 1px solid white;
+    padding-bottom: 2vw;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2vw;
+}
+
+.date h4{
+    font-weight: 100;
+}
+
+#img1 .text .h4s h4{
+    font-weight: 100;
+    font-size: 1vw;
+}
+
+#img2 .text{
+    border-bottom: 1px solid white;
+    padding-bottom: 2vw;
+}
+
+#img2 .text .h4s h4{
+    font-weight: 100;
+    font-size: 1vw;
+}
+
+#img2{
+    height:73vh;
+    width:30vw;
+}
+
+
+#img3 .text .h4s h4{
+    font-weight: 100;
+    font-size: 1vw;
+}
+
+#img4 .text{
+    border-bottom: 1px solid white;
+    padding-bottom: 2vw;
+}
+
+#img4 .text .h4s h4{
+    font-weight: 100;
+    font-size: 1vw;
+}
+
+#img4{
+    height:75vh;
+    width:30vw;
+}
+
+#img4 img{
+    object-position: top;
+    height:80vh;
+    width:30vw;
+}
+
+._canvas_container{
+    z-index: 999999 !important;
+    pointer-events: none;
+}
+
+
+.page3 > h1{
     font-size: 7vw;
     text-transform: uppercase;
     margin-left: 29%;
     position: relative;
 }
 
-.page3 h1::before{
+.page3 > h1::before{
     content:"";
     position: absolute;
-    bottom: -20%;
+    bottom: 0%;
     left: 0;
     height: 1px;
-    width: 100%;
+    width: 93%;
     background-color: white;
 }
 
-.page3 h1::after{
+.page3 > h1::after{
     content:"02";
     position: absolute;
     left: -13.5%;
@@ -393,6 +517,72 @@ nav .nav-part2 h5{
     font-style: italic;
     font-weight: 100;
 }
+
+.page3-circle1{
+    height:300px;
+    width:300px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all ease-in-out 0.5s;
+}
+
+.page3-circle1 svg{
+    width: 25%;
+}
+
+.circle-in{
+    background-color: white;
+    height:100%;
+    width:100%;
+    position: absolute;
+    color: black;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw;
+    text-align: center;
+    scale: 0;
+    border-radius: 50%;
+    transition: all ease-in-out 0.5s;
+}
+
+.circle-in p{
+    font-weight: 900;
+}
+
+.page3-circle2 svg{
+    width: 25%;
+    transform: rotate(-45deg);
+}
+
+.page3-circle2{
+    height:300px;
+    width:300px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all ease-in-out 0.5s;
+}
+
+.page3-circle2:hover .circle-in{
+    scale:1;
+    transition: all ease-in-out 0.5s;
+}
+
+.page3-circle1:hover .circle-in{
+    scale:1;
+    transition: all ease-in-out 0.5s;
+
+} 
 
 .page4{
     min-height:100vh;
