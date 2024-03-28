@@ -41,16 +41,14 @@ body{
     position: relative;
 }
 
-.cursor{
-    height:40px;
-    width:40px;
-    position: fixed;
-    background-color: transparent;
+.mousefollower{
+    height: 37px;
+    width: 37px;
     border: 1px solid rgba(255, 255, 255, 0.425);
-    border-radius: 50%;
-    z-index: 999;
     mix-blend-mode: difference;
+    background-color: rgb(255, 255, 255);
 }
+
 
 .loading-screen{
     background-color: #0B0B0B;
@@ -215,6 +213,7 @@ nav .nav-part2 h5{
 #graphic{
     margin: 0;
     position: relative;
+    z-index: 999;
     line-height: 1.1;
 }
 
@@ -232,6 +231,7 @@ nav .nav-part2 h5{
     margin: 0;
     position: relative;
     line-height: 1.1;
+    z-index: 999;
 }
 
 #web::after{
@@ -297,19 +297,6 @@ nav .nav-part2 h5{
     overflow: hidden;
 }
 
-#third-h1{
-    display: flex;
-    height: fit-content;
-    width: fit-content;
-    overflow: hidden;
-    margin-left: 27%;
-    overflow: hidden;
-}
-
-#third-h1 h1{
-    transition: all ease-in-out 0.1s;
-}
-
 .page2{
     height:80vh;
     width:100%;
@@ -318,9 +305,12 @@ nav .nav-part2 h5{
 
 .page2-video{
     position: relative;
-    left: 29%;
+    left: 30%;
     height:70vh;
     width:70vw;
+    background-image: url(./Imgs/Showreel-2022-preview-1.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .page2-video video{
@@ -328,7 +318,7 @@ nav .nav-part2 h5{
     width:100%;
     object-fit: cover;
     object-position: center;
-    background-image: url("./Showreel-2022-preview-1.jpg");
+    opacity: 0;
 }
 
 .page2-video img{
@@ -581,7 +571,6 @@ nav .nav-part2 h5{
 .page3-circle1:hover .circle-in{
     scale:1;
     transition: all ease-in-out 0.5s;
-
 } 
 
 .page4{
@@ -820,4 +809,13 @@ footer .footer-div
 
 footer > .underline2 h5{
     font-size: 1.3vw;
+}
+
+#flag{
+    height: 55vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    opacity: 0;
 }
