@@ -10,7 +10,9 @@ var flag = document.querySelector("#flag")
 var web = document.querySelector("#web")
 var graphic = document.querySelector("#graphic")
 var texti = document.querySelector("#textillate")
-
+var h1content;
+var splitText;
+var clutter = "";
 function loco() {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -120,7 +122,7 @@ Shery.makeMagnet(".nav-part2 h5");
 function sheryImage() {
     Shery.imageEffect(".img-div", {
         style: 5,
-        config: { "a": { "value": 1.83, "range": [0, 30] }, "b": { "value": -0.91, "range": [-1, 1] }, "zindex": { "value": "999999", "range": [-9999999, 9999999] }, "aspect": { "value": 0.8663389884255589 }, "ignoreShapeAspect": { "value": true }, "shapePosition": { "value": { "x": 0, "y": 0 } }, "shapeScale": { "value": { "x": 0.5, "y": 0.5 } }, "shapeEdgeSoftness": { "value": 0, "range": [0, 0.5] }, "shapeRadius": { "value": 0, "range": [0, 2] }, "currentScroll": { "value": 0 }, "scrollLerp": { "value": 0.07 }, "gooey": { "value": true }, "infiniteGooey": { "value": false }, "growSize": { "value": 4, "range": [1, 15] }, "durationOut": { "value": 1, "range": [0.1, 5] }, "durationIn": { "value": 1.5, "range": [0.1, 5] }, "displaceAmount": { "value": 0.5 }, "masker": { "value": true }, "maskVal": { "value": 1.31, "range": [1, 5] }, "scrollType": { "value": 0 }, "geoVertex": { "range": [1, 64], "value": 1 }, "noEffectGooey": { "value": true }, "onMouse": { "value": 1 }, "noise_speed": { "value": 0.92, "range": [0, 10] }, "metaball": { "value": 0.52, "range": [0, 2] }, "discard_threshold": { "value": 0.62, "range": [0, 1] }, "antialias_threshold": { "value": 0.02, "range": [0, 0.1] }, "noise_height": { "value": 0.29, "range": [0, 2] }, "noise_scale": { "value": 10.69, "range": [0, 100] } },
+        config: {"a":{"value":1.83,"range":[0,30]},"b":{"value":-0.88,"range":[-1,1]},"zindex":{"value":"999999","range":[-9999999,9999999]},"aspect":{"value":0.8663389884255589},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.31,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.53,"range":[0,10]},"metaball":{"value":0.47,"range":[0,2]},"discard_threshold":{"value":0.66,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.4,"range":[0,2]},"noise_scale":{"value":8.4,"range":[0,100]}},
         gooey: true,
     })
 }
@@ -133,8 +135,8 @@ function videoCrs() {
                 display: "none",
             })
             gsap.to(".page2-video-cursor", {
-                left: dets.x - 460,
-                top: dets.y - 230,
+                left: dets.x - 480,
+                top: dets.y - 270,
             })
         })
     })
@@ -161,8 +163,7 @@ function videoCrs() {
             })
             flag = 1
         }
-        else{
-            console.log("asdkj")
+        else {
             p2Video.pause();
             p2Video.style.opacity = 0
             p2Videocrs.innerHTML = `<i class="ri-play-fill"></i>`
@@ -175,52 +176,52 @@ function videoCrs() {
     })
 }
 
-web.addEventListener("mousemove",function(dets){
-    gsap.to("#flag",{
-        x:dets.x,
-        y:dets.y,
-        opacity:1,
+web.addEventListener("mousemove", function (dets) {
+    gsap.to("#flag", {
+        x: dets.x,
+        y: dets.y,
+        opacity: 1,
     })
 })
 
-web.addEventListener("mouseleave",function(dets){
-    gsap.to("#flag",{
-        opacity:0,
+web.addEventListener("mouseleave", function (dets) {
+    gsap.to("#flag", {
+        opacity: 0,
     })
 })
 
-graphic.addEventListener("mousemove",function(dets){
-    gsap.to("#flag",{
-        x:dets.x,
-        y:dets.y,
-        opacity:1,
+graphic.addEventListener("mousemove", function (dets) {
+    gsap.to("#flag", {
+        x: dets.x,
+        y: dets.y,
+        opacity: 1,
     })
 })
 
-graphic.addEventListener("mouseleave",function(dets){
-    gsap.to("#flag",{
-        opacity:0,
+graphic.addEventListener("mouseleave", function (dets) {
+    gsap.to("#flag", {
+        opacity: 0,
     })
 })
 
 Shery.mouseFollower();
 
-function textillate(){
-    texti.addEventListener("mouseenter", function(){
-        gsap.to("#textillate",{
-            fontFamily:"silk serif",
-            onStart: function(){
-                $('#textillate').textillate({ in: { effect: 'fadeIn' } });
-            }
-        })
-    })
-    
+function splittedText() {
+    h1content = texti.textContent
 
+    splitText = h1content.split("")
+    splitText.forEach(function (elem) {
+        clutter += `<span>${elem}</span>`
+    })
+
+
+    console.log(clutter)
+    texti.innerHTML = clutter
 }
 
 
 
-textillate()
+// splittedText()
 videoCrs()
 sheryImage()
 loading()
