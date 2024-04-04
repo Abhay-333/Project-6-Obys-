@@ -945,6 +945,9 @@ nav .nav-part2 h5 {
             animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
+
+            line-height: 1.6;
+
 }
 
 .marq2 h1 {
