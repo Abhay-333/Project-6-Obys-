@@ -13,6 +13,7 @@ var texti = document.querySelector("#textillate")
 var h1content;
 var splitText;
 var clutter = "";
+
 function loco() {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -206,22 +207,6 @@ graphic.addEventListener("mouseleave", function (dets) {
 
 Shery.mouseFollower();
 
-function splittedText() {
-    h1content = texti.textContent
-
-    splitText = h1content.split("")
-    splitText.forEach(function (elem) {
-        clutter += `<span>${elem}</span>`
-    })
-
-
-    console.log(clutter)
-    texti.innerHTML = clutter
-}
-
-
-
-// splittedText()
 videoCrs()
 sheryImage()
 loading()
