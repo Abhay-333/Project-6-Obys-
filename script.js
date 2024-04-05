@@ -14,6 +14,7 @@ var h1content;
 var splitText;
 var clutter = "";
 
+if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 function loco() {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -194,7 +195,6 @@ graphic.addEventListener("mouseleave", function (dets) {
 })
 
 
-if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     Shery.mouseFollower();
 
     function sheryImage() {
@@ -209,8 +209,8 @@ if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
     Shery.makeMagnet(".nav-part2 h5");
 
 
-}
 
+}
 videoCrs()
 sheryImage()
 loading()
